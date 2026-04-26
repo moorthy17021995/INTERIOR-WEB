@@ -1,0 +1,58 @@
+version: "2"
+type: frontend
+tech_stack:
+  - javascript
+  - react
+  - vite
+  - tailwindcss
+  - react-router-dom
+routes:
+  - path: /
+    file: src/pages/Home.jsx
+    auth_required: false
+    description: Home page with hero section and featured products
+  - path: /collection
+    file: src/pages/Collection.jsx
+    auth_required: false
+    description: Product collection page with filters and sorting
+  - path: /detail
+    file: src/pages/Detail.jsx
+    auth_required: false
+    description: Product details page with options to add to cart
+  - path: /cart
+    file: src/pages/Cart.jsx
+    auth_required: false
+    description: Shopping cart page
+features:
+  - name: Navigation
+    description: Users can navigate between Home, Collection, and Cart
+    files:
+      - src/components/Navbar.jsx
+    entry_route: /
+    user_interactions:
+      - Click on Home link
+      - Click on Collection link
+      - Click on Cart icon
+    auth_required: false
+  - name: Product Catalog
+    description: Users can browse products and apply filters
+    files:
+      - src/pages/Collection.jsx
+    entry_route: /collection
+    user_interactions:
+      - Scroll through products
+      - Click on filter categories
+      - Click on a product card to view details
+    auth_required: false
+  - name: Shopping Cart
+    description: Users can add products to cart and manage them
+    files:
+      - src/pages/Detail.jsx
+      - src/pages/Cart.jsx
+    entry_route: /detail
+    user_interactions:
+      - Click Add to Cart button in Detail page
+      - Change quantity in Cart page
+      - Remove product from Cart page
+    auth_required: false
+known_limitations: []

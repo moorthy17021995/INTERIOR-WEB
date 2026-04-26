@@ -1,0 +1,24 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:4173",
+  "executionArgs": {
+    "projectName": "stitch-react-site",
+    "projectPath": "c:\\Users\\DoDo\\Desktop\\MTY\\antigravity\\stitch-react-site",
+    "testIds": [
+      "TC001",
+      "TC002",
+      "TC004",
+      "TC005",
+      "TC008"
+    ],
+    "additionalInstruction": "Verify the fixes: \n1. Cart quantity and subtotal now update correctly when clicking '+' or '-'. \n2. Product Detail page now has an 'Add to Cart' button that navigates to the cart. \n3. Price consistency: The Kyoto Lounge Chair should be $3,200 everywhere.",
+    "serverMode": "production",
+    "envs": {
+      "API_KEY": "sk-user-zqZMjrvpJJFRr5YkrebLwfvmDhrd7Ut_fxeHA9EVY1Ao9WoEtZp-0aOlf8TC3mvW0N0rX590auIgF1iGpfKrezquBlDM3BpTymRLmJva5adPFNz9q2bOPHB6JsGHV0C0bRk"
+    }
+  },
+  "serverPort": 60319,
+  "proxy": "http://ba00ded5-19ff-4688-b45b-7713ee8848c8:Jz2oih3egEqWyn0cxux7LBpfynYEYsaH@tun.testsprite.com:8080"
+}

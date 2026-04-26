@@ -1,0 +1,824 @@
+[
+  {
+    "id": "TC001",
+    "title": "Move between core pages with persistent navigation",
+    "description": "Verifies a guest can navigate Home to Collection to Cart and sees each destination page content with site navigation present throughout.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the full collection"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart page displays the current cart contents area"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Adjust cart quantity updates order totals",
+    "description": "Verifies a shopper can increase and decrease an item's quantity in the cart and the subtotal/estimated total recalculates accordingly.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid finish or material option if options are available"
+      },
+      {
+        "type": "action",
+        "description": "Click the add-to-cart action"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart link in the global navigation"
+      },
+      {
+        "type": "action",
+        "description": "Increase the quantity for the item"
+      },
+      {
+        "type": "action",
+        "description": "Decrease the quantity for the item"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the item remains listed in the cart with an updated quantity"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the order summary subtotal and estimated total are displayed and reflect the latest quantity"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Cart quantity increases and totals recalculate",
+    "description": "Verifies a shopper can increase quantity in the cart and the subtotal or estimated total updates accordingly.",
+    "category": "Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "action",
+        "description": "Increase the quantity for the cart line item"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart totals recalculate to reflect the increased quantity"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Quick add to cart from collection and see item in cart",
+    "description": "Verifies a shopper can add a product to the cart directly from the collection card affordance and then see that item present in the cart.",
+    "category": "Product Catalog",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to a product card"
+      },
+      {
+        "type": "action",
+        "description": "Click the add-to-cart affordance on the product card"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart displays at least one line item"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Remove an item from the cart",
+    "description": "Verifies a shopper can remove a cart line item and the cart updates to no longer show that item.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid finish or material option if options are available"
+      },
+      {
+        "type": "action",
+        "description": "Click the add-to-cart action"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart link in the global navigation"
+      },
+      {
+        "type": "action",
+        "description": "Remove the item from the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the removed item is no longer listed in the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the order summary updates to reflect the cart contents"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Proceed to checkout or inquiry CTA is reachable from cart",
+    "description": "Verifies the shopper can reach the cart call-to-action to proceed to checkout or submit an inquiry without the UI breaking the flow.",
+    "category": "Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "action",
+        "description": "Click the primary proceed-to-checkout or inquiry call-to-action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the shopper is taken to the next step or sees a checkout/inquiry handoff state without errors"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Select finish/material on detail and add to cart as chosen variant",
+    "description": "Verifies a shopper can choose a finish or material on the product detail page and the cart line item reflects the selected option and price.",
+    "category": "Product Detail",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Select a finish or material option"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart line item shows the selected finish/material and corresponding price"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Browse collection with filters and sorting, then open a product",
+    "description": "Verifies a design-focused shopper can apply category and material filters plus price sorting and then open a product detail from the resulting grid.",
+    "category": "Product Catalog",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Select a category filter option"
+      },
+      {
+        "type": "action",
+        "description": "Select a material filter option"
+      },
+      {
+        "type": "action",
+        "description": "Select a price sort option"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product detail view is displayed for the selected product"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Cart shows item details (image, finish, price) for added product",
+    "description": "Verifies items added to the cart render with key line-item details including an image, selected finish, and price.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid finish or material option if options are available"
+      },
+      {
+        "type": "action",
+        "description": "Click the add-to-cart action"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart link in the global navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart lists the added item with a product image"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart line item displays a finish/material and a price"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Return from product detail to collection and continue browsing",
+    "description": "Verifies a guest can open a product from the collection, return to the collection, and then navigate back to home without getting stuck.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to return to the previous page"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to go to the home page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the home page shows a hero section and featured products"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Remove items and reach empty cart state with recovery path",
+    "description": "Verifies removing all items from the cart shows the empty cart state and provides a way to return to the collection.",
+    "category": "Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the full collection"
+      },
+      {
+        "type": "action",
+        "description": "Click a different product card to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "action",
+        "description": "Remove all cart line items"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty cart state is displayed with a path to continue shopping"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Navigate to cart from collection after browsing",
+    "description": "Verifies a guest browsing the collection can reach the cart via the cart icon and the page renders without breaking the flow.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to browse further down the product grid"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart page is displayed and ready for checkout or inquiry actions"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Cart totals update after removing an item from a multi-item cart",
+    "description": "Verifies removing one item from a cart with multiple items updates the item list and recalculates the order summary.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Click the add-to-cart action"
+      },
+      {
+        "type": "action",
+        "description": "Click the collection link in the global navigation"
+      },
+      {
+        "type": "action",
+        "description": "Open a different product from the product grid"
+      },
+      {
+        "type": "action",
+        "description": "Click the add-to-cart action"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart link in the global navigation"
+      },
+      {
+        "type": "action",
+        "description": "Remove one of the items from the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify at least one item remains listed in the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the order summary subtotal and estimated total update to reflect the remaining items"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Deep link from collection to detail and keep filter/sort context on return",
+    "description": "Verifies returning from a product detail page brings the shopper back to the collection with their previously selected filters and sorting still applied.",
+    "category": "Product Catalog",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Select a category filter option"
+      },
+      {
+        "type": "action",
+        "description": "Select a price sort option"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to return to the previous page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the collection page still shows the selected filter and sort state applied"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Featured product on home opens its product detail page",
+    "description": "Verifies a guest can open a featured product from the home page and land on a product detail view.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click a featured product card"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a product detail view is displayed with a product gallery and purchase actions"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Load more products without duplicating items",
+    "description": "Verifies using Load More appends additional products to the existing grid without showing duplicates in the visible list.",
+    "category": "Product Catalog",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the bottom of the product grid"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to load more products"
+      },
+      {
+        "type": "action",
+        "description": "Scroll through the newly extended product grid"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify additional products are displayed and the grid does not show duplicate product cards"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Reach cart from navigation and continue shopping from empty cart",
+    "description": "Verifies a guest can access the cart from navigation and, when the cart is empty, use the provided route back to the collection.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart empty-state link to continue shopping"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the collection page shows a product grid with filtering controls"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC018",
+    "title": "Cart persists across refresh in same session",
+    "description": "Verifies items added to cart remain present after a page refresh for a returning shopper on the same device/session.",
+    "category": "Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "action",
+        "description": "Refresh the page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart still displays the previously added line item"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC019",
+    "title": "Inquiry CTA shows acknowledgement and is not stuck after navigating away",
+    "description": "Verifies initiating an inquiry on product detail shows an acknowledgement and returning to the detail view does not show a stuck or duplicated submission state.",
+    "category": "Product Detail",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Select a finish or material option"
+      },
+      {
+        "type": "action",
+        "description": "Initiate the inquiry action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an inquiry acknowledgement state is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the full collection"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the inquiry action is available and not shown as already submitted for the current view"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC020",
+    "title": "Directly navigate to collection from home and ensure site chrome remains usable",
+    "description": "Verifies the home page provides a working path to the collection and that the top-level navigation remains usable after the transition.",
+    "category": "Navigation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the full collection"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view the full collection"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the collection page shows a product grid"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC021",
+    "title": "Use product gallery controls to switch images",
+    "description": "Verifies a shopper can switch the primary product image using the gallery thumbnails or controls.",
+    "category": "Product Detail",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Click a different gallery thumbnail"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the primary product image changes to match the selected thumbnail"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC022",
+    "title": "Combine filters and then clear to recover full results",
+    "description": "Verifies applying multiple filters can reduce results and clearing filters restores the full product grid.",
+    "category": "Product Catalog",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Select a category filter option"
+      },
+      {
+        "type": "action",
+        "description": "Select a material filter option"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to clear all filters"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the full product grid is displayed with many products available"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC023",
+    "title": "Removing all items shows empty cart state",
+    "description": "Verifies the cart displays an empty-state experience after the shopper removes all items.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Click the add-to-cart action"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart link in the global navigation"
+      },
+      {
+        "type": "action",
+        "description": "Remove the item from the cart"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty cart state message is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a navigation option to continue shopping is available from the empty state"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC024",
+    "title": "Filter to zero results and recover by clearing filters",
+    "description": "Verifies the collection shows an empty-state when filters produce no matches and the shopper can clear filters to see products again.",
+    "category": "Product Catalog",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Select a combination of filters that yields no results"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to clear all filters"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify products are displayed in the grid after clearing filters"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC025",
+    "title": "Cart quantity decrement at one does not go below allowed minimum",
+    "description": "Verifies decreasing quantity at the minimum does not result in a negative or invalid quantity through normal interactions.",
+    "category": "Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /collection"
+      },
+      {
+        "type": "action",
+        "description": "Click a product card to view its details"
+      },
+      {
+        "type": "action",
+        "description": "Add the product to the cart"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart icon"
+      },
+      {
+        "type": "action",
+        "description": "Decrease the quantity until it reaches the minimum allowed value"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to decrease the quantity again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the quantity does not go below the minimum allowed value"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC026",
+    "title": "Quantity cannot go below minimum via decrement control",
+    "description": "Verifies decreasing quantity at the minimum does not result in a zero or negative quantity through normal UI interactions.",
+    "category": "Shopping Cart",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /detail"
+      },
+      {
+        "type": "action",
+        "description": "Click the add-to-cart action"
+      },
+      {
+        "type": "action",
+        "description": "Click the cart link in the global navigation"
+      },
+      {
+        "type": "action",
+        "description": "Decrease the quantity for the item until it reaches the minimum allowed value"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to decrease the quantity one more time"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the item quantity does not drop below the minimum allowed value"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the cart does not display an invalid quantity state"
+      }
+    ],
+    "priority": "Low"
+  }
+]
